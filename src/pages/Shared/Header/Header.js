@@ -5,8 +5,9 @@ import { CgCloseR } from 'react-icons/cg';
 const Header = () => {
     const menu = <>
         <Link className='btn btn-ghost' to='/'>Home</Link>
+        <Link className='btn btn-ghost' to='/addproduct'>Add Product</Link>
         <Link className='btn btn-ghost' to='/about'>About</Link>
-
+        <Link className='btn btn-ghost' to='/profile'>Profile</Link>
     </>
     return (
         <div className="drawer">
