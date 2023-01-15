@@ -8,7 +8,7 @@ const Banner = ({ slide }) => {
             <div className='carousel-img '>
                 <img src={image} alt='' className="w-screen border-none h-full lg:h-5/6 rounded-xl" />
             </div>
-            <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-3 lg:bottom-24">
+            <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-1 lg:bottom-24">
                 <a href={`#slide${prev}`} className="btn btn-circle">❮</a>
                 <a href={`#slide${next}`} className="btn btn-circle">❯</a>
             </div>
