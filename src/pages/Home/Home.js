@@ -5,6 +5,7 @@ import pic3 from '../../components/images/maxresdefault.webp'
 import pic4 from '../../components/images/1563590510_swift_7_1.jpg'
 import pic5 from '../../components/images/hero_startframe__gfzn6m1jpf6u_large_2x.jpg'
 import Banner from './Banner';
+import Products from '../products/Products';
 
 const Home = () => {
     const bannarData = [
@@ -42,10 +43,14 @@ const Home = () => {
     ]
     return (
         <div>
-            <div className="carousel w-11/12 mx-auto h-3/4 my-2">
+            <div className="carousel w-11/12 mx-auto my-2 lg:h-2/5">
                 {
                     bannarData.map(slide => <Banner key={slide.id} slide={slide}></Banner>)
                 }
+            </div>
+            <div className='mt-10 w-11/12 mx-auto'>
+                <h1 className='text-center text-3xl font-semibold'>Our Products</h1>
+                <Products></Products>
             </div>
         </div>
     );

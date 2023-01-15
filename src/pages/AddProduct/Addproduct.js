@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast';
 
 const Addproduct = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
-    const handleProduct = (data) => {
+    const handleProduct = (data, event) => {
         if (data.description.length < 100) {
             return toast((t) => (
                 <span className='text-sm'>
@@ -40,7 +40,7 @@ const Addproduct = () => {
                         .then(res => res.json())
                         .then(data => {
                             if (data.acknowledged) {
-                                console.log(data)
+                                event.target.reset()
                                 return toast.success('Product is added')
                             }
                         })
