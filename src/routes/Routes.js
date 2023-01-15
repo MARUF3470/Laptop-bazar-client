@@ -1,6 +1,7 @@
 import About from "../pages/About/About";
 import Addproduct from "../pages/AddProduct/Addproduct";
 import Home from "../pages/Home/Home";
+import ProductDetails from "../pages/products/ProductDetails";
 import Profile from "../pages/Profile/Profile";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
             {
                 path: '/addproduct',
                 element: <Addproduct></Addproduct>
+            },
+            {
+                path: '/product/:id',
+                element: <ProductDetails></ProductDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path: '/about',

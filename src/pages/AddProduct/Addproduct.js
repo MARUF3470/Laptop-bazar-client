@@ -30,6 +30,7 @@ const Addproduct = () => {
                     const product = {
                         title: data.title,
                         img: imgdata.data.url,
+                        price: data.price,
                         description: data.description
                     }
                     fetch('http://localhost:5000/products', {
@@ -56,6 +57,8 @@ const Addproduct = () => {
                     </label>
                     <input {...register('title', { required: 'Provide a title for the product' })} type="text" placeholder="Type here" className="input input-bordered w-full" />
                     {errors.title && <p className='text-sm text-red-500 mt-1'>{errors.title.message}</p>}
+                    <input {...register('price', { required: 'Provide a price for the product' })} type="number" placeholder="Type here" className="input input-bordered w-full mt-2" />
+                    {errors.price && <p className='text-sm text-red-500 mt-1'>{errors.price.message}</p>}
                     <textarea {...register('description', { required: 'Provide product description' })} className="textarea textarea-bordered w-full mt-2" placeholder="Type product description"></textarea>
                     {errors.description && <p className='text-red-500 mt-1 text-sm'> {errors.description.message}</p>}
                     <div className='flex items-center gap-3 mt-2'>
