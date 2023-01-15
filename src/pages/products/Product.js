@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    console.log(product)
     return (
         <div className="card w-full bg-base-100 shadow-xl">
             <figure className="p-5">

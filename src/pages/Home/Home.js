@@ -48,7 +48,7 @@ const Home = () => {
                     bannarData.map(slide => <Banner key={slide.id} slide={slide}></Banner>)
                 }
             </div>
-            <div className='mt-10 w-11/12 mx-auto'>
+            <div className='my-10 w-11/12 mx-auto'>
                 <h1 className='text-center text-3xl font-semibold'>Our Products</h1>
                 <Products></Products>
             </div>
